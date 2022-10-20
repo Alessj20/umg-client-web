@@ -1,4 +1,4 @@
-import { Client } from './../model/Client';
+import { Client } from './../model/client';
 import { ClientService } from '../services/client.service';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -38,7 +38,7 @@ export class UpdateComponent implements OnInit {
   }
 
   getProduct(): void {
-    this._id = this.activatedRoute.snapshot.params._id;
+    this._id = this.activatedRoute.snapshot.params.id;
     this.clientService.detail(this._id).subscribe(
       data => {
         this.client = data.data;

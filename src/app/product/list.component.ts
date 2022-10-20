@@ -2,7 +2,7 @@ import Swal from 'sweetalert2';
 import { ClientService } from '../services/client.service';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { Client } from '../model/Client';
+import { Client } from '../model/client';
 
 @Component({
   selector: 'app-list',
@@ -12,6 +12,7 @@ import { Client } from '../model/Client';
 export class ListComponent implements OnInit {
 
   clients: Client[] = [];
+  displayedColumns: string[] = ['_id', 'name', 'birthday', 'gender', 'dpi', 'address', 'nit', 'phone', 'actions'];
 
   constructor(
     private clientService: ClientService,
@@ -26,6 +27,7 @@ export class ListComponent implements OnInit {
     this.clientService.list().subscribe(
       data => {
         this.clients = data.data;
+        console.log("clients", this.clients)
       },
       err => {
         this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-top-center' });

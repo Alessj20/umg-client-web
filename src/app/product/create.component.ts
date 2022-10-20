@@ -1,4 +1,4 @@
-import { Client } from '../model/Client';
+import { Client } from '../model/client';
 import { ClientService } from '../services/client.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';

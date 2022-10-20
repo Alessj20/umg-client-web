@@ -24,7 +24,10 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-
+import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -48,9 +51,15 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatButtonModule,
     MatButtonToggleModule,
     MatInputModule,
+    MatDatepickerModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatCardModule
+  ],
+  providers: [
     MatDatepickerModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

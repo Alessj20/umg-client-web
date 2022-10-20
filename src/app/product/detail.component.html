@@ -4,21 +4,20 @@
     <div class="row mt-5">
         <div class="col-md-4 mx-auto">
             <div class="card">
-                <div class="card-header text-center">
-                    Detail
-                </div>
+                <mat-card mat-card-title style="text-align: center; background-color: black; color: white;">CLIENT DETAILS</mat-card>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><b>ID: </b>{{client._id}}</li>
+                        <li class="list-group-item" style="text-align: center;"><img src="https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/large/public/2021-10/los-mejores-juegos-de-perritos-cachorros-por-mes-de-edad.png?itok=UNEbd6Xh" alt=""></li>
                         <li class="list-group-item"><b>Name: </b>{{client.name}}</li>
-                        <li class="list-group-item"><b>Birthday: </b>{{client.birthday}</li>
-                        <li class="list-group-item"><b>Gender: </b>{{client.gender} </li>
-                        <li class="list-group-item"><b>DPI: </b>{{client.dpi} </li>
-                        <li class="list-group-item"><b>Address: </b>{{client.address} </li>
-                        <li class="list-group-item"><b>NIT: </b>{{client.nit} </li>
-                        <li class="list-group-item"><b>Phone: </b>{{client.phone} </li>
-                        <li class="list-group-item"><b>Creation Date: </b>{{client.createdAt} </li>
-                        <li class="list-group-item"><b>Update Date: </b>{{client.updatedAt} </li>
+                        <li class="list-group-item"><b>ID: </b>{{client._id}}</li>
+                        <li class="list-group-item"><b>Birthday: </b>{{client.birthday | date: "dd/MM/yyyy"}}</li>
+                        <li class="list-group-item"><b>Gender: </b>{{client.gender}} </li>
+                        <li class="list-group-item"><b>DPI: </b>{{client.dpi}} </li>
+                        <li class="list-group-item"><b>Address: </b>{{client.address}} </li>
+                        <li class="list-group-item"><b>NIT: </b>{{client.nit}} </li>
+                        <li class="list-group-item"><b>Phone: </b>{{client.phone}} </li>
+                        <li class="list-group-item"><b>Creation Date: </b>{{client.createdAt | date: "dd/MM/yyyy"}} </li>
+                        <li class="list-group-item"><b>Update Date: </b>{{client.updatedAt | date: "dd/MM/yyyy"}} </li>
                     </ul>
                 </div>
                 <div class="card-footer">
