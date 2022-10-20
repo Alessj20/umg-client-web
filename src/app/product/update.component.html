@@ -1,0 +1,53 @@
+<app-menu></app-menu>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <h4 class="text-center">Update Product</h4>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="client name"
+                        autocomplete="off" required [(ngModel)]="client.name">
+                </div>
+                <div class="mb-3">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [matDatepicker]="picker" [(ngModel)]="client.birthday">
+                        <mat-hint>YYYY/MM/DD</mat-hint>
+                        <mat-datepicker-toggle matSuffix [for]="picker">
+                          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                </div>
+                <div class="mb-3">
+                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                        <mat-button-toggle value="F" [(ngModel)]="client.gender">F</mat-button-toggle>
+                        <mat-button-toggle value="M" [(ngModel)]="client.gender">M</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="dpi" name="dpi" placeholder="client DPI"
+                        autocomplete="off" required [(ngModel)]="client.dpi">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="address" name="address" placeholder="client Address"
+                        autocomplete="off" required [(ngModel)]="client.address">
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="address" name="nit" placeholder="client NIT"
+                        autocomplete="off" required [(ngModel)]="client.nit">
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="phone" name="phone" placeholder="client Phone"
+                        autocomplete="off" required [(ngModel)]="client.phone">
+                </div>
+                <button class="btn btn-outline-success w-100 mb-3" [disabled]="!f.valid">
+                        <i class="far fa-edit"></i> Update
+                </button>
+                <button class="btn btn-outline-primary w-100" routerLink="/">
+                    <i class="fas fa-arrow-alt-circle-left"></i> Back
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

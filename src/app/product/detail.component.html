@@ -1,0 +1,32 @@
+<app-menu></app-menu>
+
+<div class="container" *ngIf="client">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-header text-center">
+                    Detail
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>ID: </b>{{client._id}}</li>
+                        <li class="list-group-item"><b>Name: </b>{{client.name}}</li>
+                        <li class="list-group-item"><b>Birthday: </b>{{client.birthday}</li>
+                        <li class="list-group-item"><b>Gender: </b>{{client.gender} </li>
+                        <li class="list-group-item"><b>DPI: </b>{{client.dpi} </li>
+                        <li class="list-group-item"><b>Address: </b>{{client.address} </li>
+                        <li class="list-group-item"><b>NIT: </b>{{client.nit} </li>
+                        <li class="list-group-item"><b>Phone: </b>{{client.phone} </li>
+                        <li class="list-group-item"><b>Creation Date: </b>{{client.createdAt} </li>
+                        <li class="list-group-item"><b>Update Date: </b>{{client.updatedAt} </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-primary w-100" routerLink="/">
+                        <i class="fas fa-arrow-alt-circle-left"></i> Back
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
