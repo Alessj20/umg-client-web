@@ -30,11 +30,11 @@ export class UpdateComponent implements OnInit {
   onUpdate(): void {
     this.clientService.update(this._id, this.client).subscribe(
       data => {
-        this.toast.success(data.message, 'OK', { timeOut: 3000, positionClass: 'toast-top-center'});
+        this.toast.success(data.message, 'OK', { timeOut: 3000, positionClass: 'toast-bottom-center'});
         this.router.navigate(['']);
       },
       err => {
-        this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-top-center'});
+        this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-bottom-center'});
       }
     );
   }
@@ -47,7 +47,7 @@ export class UpdateComponent implements OnInit {
         
       },
       err => {
-        this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-top-center'});
+        this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-bottom-center'});
         this.router.navigate(['']);
       }
     );

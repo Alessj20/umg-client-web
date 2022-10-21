@@ -34,11 +34,11 @@ export class CreateComponent implements OnInit {
     const product = new Client(this.name, this.birthday, this.gender, this.dpi, this.address, this.nit, this.phone);
     this.clientService.create(product).subscribe(
       data => {
-        this.toast.success(data.message, 'OK', { timeOut: 3000, positionClass: 'toast-top-center'});
+        this.toast.success(data.message, 'OK', { timeOut: 3000, positionClass: 'toast-bottom-center'});
         this.router.navigate(['']);
       },
       err => {
-        this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-top-center'});
+        this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-bottom-center'});
       }
     );
   }

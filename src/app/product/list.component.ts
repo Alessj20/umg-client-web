@@ -30,7 +30,7 @@ export class ListComponent implements OnInit {
         console.log("clients", this.clients)
       },
       err => {
-        this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-top-center' });
+        this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-bottom-center' });
       }
     );
   }
@@ -47,11 +47,11 @@ export class ListComponent implements OnInit {
       if (result.value) {
         this.clientService.delete(_id).subscribe(
           data => {
-            this.toast.success(data.message, 'OK', { timeOut: 3000, positionClass: 'toast-top-center' });
+            this.toast.success(data.message, 'OK', { timeOut: 3000, positionClass: 'toast-bottom-center' });
             this.getProducts();
           },
           err => {
-            this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-top-center' });
+            this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-bottom-center' });
           }
         );
       } else if (result.dismiss === Swal.DismissReason.cancel) {

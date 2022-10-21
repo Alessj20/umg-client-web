@@ -32,7 +32,7 @@ export class DetailComponent implements OnInit {
         console.log(this.client);
       },
       err => {
-        this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-top-center'});
+        this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-bottom-center'});
         this.router.navigate(['']);
       }
     );
