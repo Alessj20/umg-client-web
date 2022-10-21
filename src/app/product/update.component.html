@@ -13,9 +13,9 @@
                         autocomplete="off" required [(ngModel)]="client.birthday">
                 </div>
                 <div class="mb-3">
-                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-                        <mat-button-toggle value="F" [(ngModel)]="client.gender">F</mat-button-toggle>
-                        <mat-button-toggle value="M" [(ngModel)]="client.gender">M</mat-button-toggle>
+                    <mat-button-toggle-group name="gender" [(ngModel)]="client.gender" aria-label="Font Style">
+                        <mat-button-toggle value="F">F</mat-button-toggle>
+                        <mat-button-toggle value="M">M</mat-button-toggle>
                     </mat-button-toggle-group>
                 </div>
                 <div class="mb-3">

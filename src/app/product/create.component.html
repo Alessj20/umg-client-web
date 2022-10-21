@@ -9,20 +9,13 @@
                         autocomplete="off" required [(ngModel)]="name">
                 </div>
                 <div class="mb-3">
-                    <mat-form-field class="example-full-width" appearance="fill">
-                        <mat-label>Choose a date</mat-label>
-                        <input matInput [matDatepicker]="picker" [(ngModel)]="birthday">
-                        <mat-hint>YYYY/MM/DD</mat-hint>
-                        <mat-datepicker-toggle matSuffix [for]="picker">
-                          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-                        </mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                      </mat-form-field>
+                    <input type="date" class="form-control" id="birthday" name="birthday" placeholder="client Birthday"
+                        autocomplete="off" required [(ngModel)]="birthday">
                 </div>
                 <div class="mb-3">
-                    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-                        <mat-button-toggle value="F" [(ngModel)]="gender">F</mat-button-toggle>
-                        <mat-button-toggle value="M" [(ngModel)]="gender">M</mat-button-toggle>
+                    <mat-button-toggle-group name="gender" [(ngModel)]="gender" aria-label="Font Style">
+                        <mat-button-toggle value="F">F</mat-button-toggle>
+                        <mat-button-toggle value="M">M</mat-button-toggle>
                     </mat-button-toggle-group>
                 </div>
                 <div class="mb-3">

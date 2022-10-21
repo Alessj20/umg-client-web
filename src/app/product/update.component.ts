@@ -3,6 +3,7 @@ import { ClientService } from '../services/client.service';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { UtilService } from '../services/util.service';
 
 @Component({
   selector: 'app-update',
@@ -18,11 +19,12 @@ export class UpdateComponent implements OnInit {
     private clientService: ClientService,
     private toast: ToastrService,
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private utilService: UtilService
   ) { }
 
-  ngOnInit(): void {
-    this.getProduct();
+  async ngOnInit() {
+    await this.getProduct();
   }
 
   onUpdate(): void {
@@ -37,12 +39,12 @@ export class UpdateComponent implements OnInit {
     );
   }
 
-  getProduct(): void {
+  async getProduct() {
     this._id = this.activatedRoute.snapshot.params.id;
-    this.clientService.detail(this._id).subscribe(
-      data => {
+    await this.clientService.detail(this._id).subscribe (
+      async data => {
         this.client = data.data;
-        console.log(this.client);
+        
       },
       err => {
         this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-top-center'});
@@ -51,4 +53,10 @@ export class UpdateComponent implements OnInit {
     );
   }
 
+  async transformBirthday(date: Date) {
+    const day = date.getDay();
+    const month = date.getMonth();
+    const year = date.getFullYear();
+    return new Date(day, month, year);
+  }
 }

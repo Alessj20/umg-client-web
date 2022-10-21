@@ -29,6 +29,8 @@ export class CreateComponent implements OnInit {
   }
 
   onCreate(): void {
+    console.log("gender", this.gender)
+    console.log("birthday", this.birthday)
     const product = new Client(this.name, this.birthday, this.gender, this.dpi, this.address, this.nit, this.phone);
     this.clientService.create(product).subscribe(
       data => {
