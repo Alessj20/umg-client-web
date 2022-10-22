@@ -1,0 +1,8 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('http://localhost:3000/profile-1666461302632.jpeg');
+    background-size: cover;
+  }

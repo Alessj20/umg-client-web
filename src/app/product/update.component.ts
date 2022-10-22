@@ -3,7 +3,6 @@ import { ClientService } from '../services/client.service';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { UtilService } from '../services/util.service';
 
 @Component({
   selector: 'app-update',
@@ -19,8 +18,7 @@ export class UpdateComponent implements OnInit {
     private clientService: ClientService,
     private toast: ToastrService,
     private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private utilService: UtilService
+    private activatedRoute: ActivatedRoute
   ) { }
 
   async ngOnInit() {
@@ -51,12 +49,5 @@ export class UpdateComponent implements OnInit {
         this.router.navigate(['']);
       }
     );
-  }
-
-  async transformBirthday(date: Date) {
-    const day = date.getDay();
-    const month = date.getMonth();
-    const year = date.getFullYear();
-    return new Date(day, month, year);
   }
 }

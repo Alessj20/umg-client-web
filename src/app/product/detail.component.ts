@@ -12,6 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 export class DetailComponent implements OnInit {
 
   client!: Client;
+  profilePicture!: File;
 
   constructor(
     private clientService: ClientService,
@@ -20,8 +21,8 @@ export class DetailComponent implements OnInit {
     private activatedRoute: ActivatedRoute
   ) { }
 
-  ngOnInit(): void {
-    this.getProduct();
+  async ngOnInit() {
+    await this.getProduct();
   }
 
   getProduct(): void {
@@ -32,7 +33,7 @@ export class DetailComponent implements OnInit {
         console.log(this.client);
       },
       err => {
-        this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-bottom-center'});
+        this.toast.error(err.error.message, 'Error', { timeOut: 3000, positionClass: 'toast-bottom-center' });
         this.router.navigate(['']);
       }
     );
