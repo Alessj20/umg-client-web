@@ -9,10 +9,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 // components
-import { ListComponent } from './product/list.component';
-import { DetailComponent } from './product/detail.component';
-import { CreateComponent } from './product/create.component';
-import { UpdateComponent } from './product/update.component';
+import { ListComponent } from './client/list.component';
+import { DetailComponent } from './client/detail.component';
+import { CreateComponent } from './client/create.component';
+import { UpdateComponent } from './client/update.component';
 import { MenuComponent } from './menu/menu.component';
 
 // external

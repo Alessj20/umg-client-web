@@ -1,7 +1,7 @@
-import { UpdateComponent } from './product/update.component';
-import { CreateComponent } from './product/create.component';
-import { DetailComponent } from './product/detail.component';
-import { ListComponent } from './product/list.component';
+import { UpdateComponent } from './client/update.component';
+import { CreateComponent } from './client/create.component';
+import { DetailComponent } from './client/detail.component';
+import { ListComponent } from './client/list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 

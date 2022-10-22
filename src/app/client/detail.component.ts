@@ -1,4 +1,4 @@
-import { Client } from './../model/client';
+import { Client } from '../model/client';
 import { ClientService } from '../services/client.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -12,7 +12,6 @@ import { ToastrService } from 'ngx-toastr';
 export class DetailComponent implements OnInit {
 
   client!: Client;
-  profilePicture!: File;
 
   constructor(
     private clientService: ClientService,
