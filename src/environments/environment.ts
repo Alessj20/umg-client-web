@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiResrURL: 'http://localhost:3000/api'
+  apiResrURL: 'https://umg-client-api-first-node.herokuapp.com/api/'
 };
 
 /*
